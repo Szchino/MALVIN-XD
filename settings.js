@@ -2,17 +2,17 @@
 const fs = require('fs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
-function convertToBool(text, fault = 'true') {
+function convertToBool (text, fault = 'true') {
     return text === fault ? true : false;
 }
-module.exports = {
+module.exports = { 
 SESSION_ID: process.env.SESSION_ID || "",
 // add your Session Id make sure it starts with malvin~
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "ᴍᴀʟᴠɪɴ-xᴅ",
+BOT_NAME: process.env.BOT_NAME || "Szchino_El_Sabio",
 // add bot name here for menu
-MODE: process.env.MODE || "public",
+MODE: process.env.MODE || "",
 // make bot public-private-inbox-group 
 
 LINK_WHITELIST: "youtube.com,github.com",
@@ -25,16 +25,16 @@ LINK_WHITELIST: "youtube.com,github.com",
 // make true or false status auto seen
 
         AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
-// make true if you want auto reply on status 
+// make true if you want auto reply on status  
 
         AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // make true if you want auto reply on status 
 
         AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY MALVIN XD 😆*",
-// set the auto reply massage on status reply  
+// set the auto reply massage on status reply   
 
 
-       WELCOME: process.env.WELCOME || "true",
+       WELCOME: process.env.WELCOME || "false",
 // true if want welcome and goodbye msg in groups 
    
        ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
